@@ -1,0 +1,123 @@
+/* General Body Styling */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f7f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header, main, footer {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #FF2D20;
+}
+
+/* Card Styling */
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    margin-bottom: 20px;
+}
+
+/* Logo Styling & Animation */
+#logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    height: 150px;
+}
+
+.logo-svg {
+    width: 125px;
+    height: 125px;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.logo-group {
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo-svg:hover .logo-group {
+    transform: rotate(10deg) scale(1.1);
+}
+
+.logo-part-1, .logo-part-2 {
+    transition: fill 0.3s ease;
+}
+
+.logo-svg:hover .logo-part-1,
+.logo-svg:hover .logo-part-2 {
+    fill: url(#logoGradientHover);
+}
+
+/* Spin animation class to be toggled by JS */
+.spin {
+    animation: spin-animation 2s linear infinite;
+}
+
+@keyframes spin-animation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Button Styling */
+button {
+    background-color: #FF2D20;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #f9a825;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.interaction-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Dots container for loop demo */
+.dots-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+    height: 20px;
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+    background-color: #ccc;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
